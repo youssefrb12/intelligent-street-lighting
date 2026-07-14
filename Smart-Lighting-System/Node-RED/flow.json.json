@@ -1,0 +1,859 @@
+[
+    {
+        "id": "bfe41810b657b802",
+        "type": "tab",
+        "label": "Page MANUEL",
+        "disabled": false
+    },
+    {
+        "id": "d9c77dce0b182d8f",
+        "type": "ui_switch",
+        "z": "bfe41810b657b802",
+        "name": "Switch Mode",
+        "label": "Mode",
+        "tooltip": "",
+        "group": "a582ed45199a89c8",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "onvalue": "MANUEL",
+        "onvalueType": "str",
+        "onicon": "touch_app",
+        "oncolor": "#ef4444",
+        "offvalue": "AUTO",
+        "offvalueType": "str",
+        "officon": "settings_remote",
+        "offcolor": "#22c55e",
+        "animate": true,
+        "className": "",
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "50e6adabd46fa666",
+                "4a65807b34b32ccf"
+            ]
+        ]
+    },
+    {
+        "id": "50e6adabd46fa666",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "Pub Mode",
+        "topic": "rue/cmd/mode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 420,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1a0b0a24e426c9a0",
+        "type": "ui_button",
+        "z": "bfe41810b657b802",
+        "name": "L1 ON",
+        "group": "022b5727eb04d10e",
+        "order": 6,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "Lampe 1 — ON",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#f0a500",
+        "className": "",
+        "icon": "lightbulb_outline",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "rue/cmd/lampe/1",
+        "topicType": "str",
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "66e18642925a4115"
+            ]
+        ]
+    },
+    {
+        "id": "1d95ae4c21726337",
+        "type": "ui_button",
+        "z": "bfe41810b657b802",
+        "name": "L1 OFF",
+        "group": "022b5727eb04d10e",
+        "order": 7,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "Lampe 1 — OFF",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#374151",
+        "className": "",
+        "icon": "lightbulb_outline",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "rue/cmd/lampe/1",
+        "topicType": "str",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "1e7a8cb57fbc0681"
+            ]
+        ]
+    },
+    {
+        "id": "733b68799b65b2f8",
+        "type": "ui_button",
+        "z": "bfe41810b657b802",
+        "name": "L2 ON",
+        "group": "022b5727eb04d10e",
+        "order": 8,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "Lampe 2 — ON",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#f0a500",
+        "className": "",
+        "icon": "lightbulb_outline",
+        "payload": "ON",
+        "payloadType": "str",
+        "topic": "rue/cmd/lampe/2",
+        "topicType": "str",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "6e58d77373bf45fd"
+            ]
+        ]
+    },
+    {
+        "id": "c092375a972f9a98",
+        "type": "ui_button",
+        "z": "bfe41810b657b802",
+        "name": "L2 OFF",
+        "group": "022b5727eb04d10e",
+        "order": 9,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "Lampe 2 — OFF",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#374151",
+        "className": "",
+        "icon": "lightbulb_outline",
+        "payload": "OFF",
+        "payloadType": "str",
+        "topic": "rue/cmd/lampe/2",
+        "topicType": "str",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "a504af62690766fa"
+            ]
+        ]
+    },
+    {
+        "id": "a75a0b2d15e122bd",
+        "type": "ui_button",
+        "z": "bfe41810b657b802",
+        "name": "L3 ON",
+        "group": "022b5727eb04d10e",
+        "order": 10,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "Lampe 3 — ON",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#f0a500",
+        "className": "",
+        "icon": "lightbulb_outline",
+        "payload": "ON",
+        "payloadType": "str",
+        "topic": "rue/cmd/lampe/3",
+        "topicType": "str",
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "5a23b1271f9d3bd4"
+            ]
+        ]
+    },
+    {
+        "id": "f3427efe4b35f670",
+        "type": "ui_button",
+        "z": "bfe41810b657b802",
+        "name": "L3 OFF",
+        "group": "022b5727eb04d10e",
+        "order": 11,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "Lampe 3 — OFF",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#374151",
+        "className": "",
+        "icon": "lightbulb_outline",
+        "payload": "OFF",
+        "payloadType": "str",
+        "topic": "rue/cmd/lampe/3",
+        "topicType": "str",
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "e5bf6f583aaa768d"
+            ]
+        ]
+    },
+    {
+        "id": "66e18642925a4115",
+        "type": "change",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "0d5cf6743fdffcad",
+                "e2ff685ceb77eaa7"
+            ]
+        ]
+    },
+    {
+        "id": "0d5cf6743fdffcad",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/lampe/1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 850,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4df31cad6f97572e",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/cmd/lampe/1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 890,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7d2ab0df6ace807f",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/lampe/2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1130,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "6322ca3fb557c4ea",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/lampe/2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1030,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ec26bcf22f4c4ab8",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/lampe/3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "153c1720e1a5d4c2",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/lampe/3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 690,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1e7a8cb57fbc0681",
+        "type": "change",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "4df31cad6f97572e",
+                "313c74a37bac3e2f"
+            ]
+        ]
+    },
+    {
+        "id": "6e58d77373bf45fd",
+        "type": "change",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "7d2ab0df6ace807f",
+                "2e4c82e5f3b5448e"
+            ]
+        ]
+    },
+    {
+        "id": "a504af62690766fa",
+        "type": "change",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "6322ca3fb557c4ea",
+                "af0179db5697c375"
+            ]
+        ]
+    },
+    {
+        "id": "5a23b1271f9d3bd4",
+        "type": "change",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "ec26bcf22f4c4ab8",
+                "b46da5a89714ef3d"
+            ]
+        ]
+    },
+    {
+        "id": "e5bf6f583aaa768d",
+        "type": "change",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "153c1720e1a5d4c2",
+                "bce8eeb1d2c421cf"
+            ]
+        ]
+    },
+    {
+        "id": "e2ff685ceb77eaa7",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/cmd/lampe/1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 870,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "313c74a37bac3e2f",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/lampe/1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 910,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2e4c82e5f3b5448e",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/cmd/lampe/2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 990,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "af0179db5697c375",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/cmd/lampe/2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1030,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b46da5a89714ef3d",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/cmd/lampe/3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 1050,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bce8eeb1d2c421cf",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/cmd/lampe/3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 710,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4a65807b34b32ccf",
+        "type": "mqtt out",
+        "z": "bfe41810b657b802",
+        "name": "",
+        "topic": "rue/mode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 380,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "14df2e4c92036d45",
+        "type": "ui_gauge",
+        "z": "bfe41810b657b802",
+        "name": "Gauge Lampe 3",
+        "group": "a582ed45199a89c8",
+        "order": 3,
+        "width": "6",
+        "height": "6",
+        "gtype": "donut",
+        "title": "",
+        "label": "Lampe 3",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#1e3a5f",
+            "#f0a500",
+            "#22c55e"
+        ],
+        "seg1": 30,
+        "seg2": 70,
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "5c1da9fa2f34bcec",
+        "type": "mqtt in",
+        "z": "bfe41810b657b802",
+        "name": "Tous topics",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "8ead6ea491f717b2"
+            ]
+        ]
+    },
+    {
+        "id": "2345e446e78635ab",
+        "type": "ui_gauge",
+        "z": "bfe41810b657b802",
+        "name": "Gauge Lampe 2",
+        "group": "a582ed45199a89c8",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "gtype": "donut",
+        "title": "",
+        "label": "Lampe 2",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#1e3a5f",
+            "#f0a500",
+            "#22c55e"
+        ],
+        "seg1": 30,
+        "seg2": 70,
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8633f9da8c93cab3",
+        "type": "ui_text",
+        "z": "bfe41810b657b802",
+        "group": "022b5727eb04d10e",
+        "order": 4,
+        "width": "12",
+        "height": "2",
+        "name": "Mode actuel",
+        "label": "Mode actuel",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 550,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8ead6ea491f717b2",
+        "type": "function",
+        "z": "bfe41810b657b802",
+        "name": "Router AUTO",
+        "func": "var t = msg.topic;\nvar p = msg.payload;\n\nif (t === 'rue/lampe/1') {\n  return [{ payload: parseInt(p) }, null, null, null];\n}\nif (t === 'rue/lampe/2') {\n  return [null, { payload: parseInt(p) }, null, null];\n}\nif (t === 'rue/lampe/3') {\n  return [null, null, { payload: parseInt(p) }, null];\n}\nif (t === 'rue/mode') {\n  return [null, null, null, { payload: p }];\n}\nreturn null;",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "0c79131b65725ba1"
+            ],
+            [
+                "2345e446e78635ab"
+            ],
+            [
+                "14df2e4c92036d45"
+            ],
+            [
+                "8633f9da8c93cab3"
+            ]
+        ]
+    },
+    {
+        "id": "0c79131b65725ba1",
+        "type": "ui_gauge",
+        "z": "bfe41810b657b802",
+        "name": "Gauge Lampe 1",
+        "group": "022b5727eb04d10e",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "donut",
+        "title": "",
+        "label": "Lampe 1",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#1e3a5f",
+            "#f0a500",
+            "#22c55e"
+        ],
+        "seg1": 30,
+        "seg2": 70,
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a582ed45199a89c8",
+        "type": "ui_group",
+        "name": "État des lampes",
+        "tab": "37ae0ec81ed048bd",
+        "order": 2,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Tous les topics",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": " NR_PIR_01",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "022b5727eb04d10e",
+        "type": "ui_group",
+        "name": "Contrôle Manuel",
+        "tab": "32500bfe8ec731f0",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "37ae0ec81ed048bd",
+        "type": "ui_tab",
+        "name": "Mode Automatique",
+        "icon": "settings_remote",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "32500bfe8ec731f0",
+        "type": "ui_tab",
+        "name": "Mode Manuel",
+        "icon": "touch_app",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c6a31313c7302f88",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
